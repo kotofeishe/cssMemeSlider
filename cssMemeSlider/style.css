@@ -8,9 +8,9 @@ body {
     width: 90%;                     
     margin: auto;
     display: flex;
-    flex-direction:column-reverse;
-    
-    
+    flex-direction: column;
+    overflow: hidden;
+       
 }
 
 .slides {
@@ -32,29 +32,44 @@ img {
     border-radius: 10px;
 }
 
-.slides-separate {
-    min-width: 100%;
-    display: flex;
-    justify-content: center; 
-}
-
 .bullets {
     display: flex;
     justify-content: flex-end;
     margin-top: auto;
-    transform: translateY(calc(-300%));
+    transform: translateY(calc(-360%));
 }
 
 .mem {
     min-width: 100%;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease;
-    
-    
+    transition: transform 0.3s ease;   
 }
 
+.one-mem {
+    transition: 0.3s ease;
+}
 
+input[type="radio"] {
+    display: none;
+}
+
+.bullets label {
+    height: 0.8em;
+    width: 0.8em;
+    border-radius: 50px;
+    background-color: #71ABFF;
+    margin-left: 0.5em;
+    cursor: pointer;
+    border: #71ABFF solid 0.1em;
+}
+
+input#slide1:checked ~ .bullets label[for="slide1"],
+input#slide2:checked ~ .bullets label[for="slide2"],
+input#slide3:checked ~ .bullets label[for="slide3"],
+input#slide4:checked ~ .bullets label[for="slide4"] {
+    background-color: transparent;
+}
 
 @media (min-width: 1300px)  {
     .slider {
@@ -120,9 +135,26 @@ img {
 
 }
 
-#slide1:checked  ~ .slides {
-    transform: rotate(90deg)
+input#slide1:checked ~ .slides .mem {
+    transform: translateX(0);
 }
+input#slide2:checked ~ .slides .one-mem {
+    opacity: 0;
+}
+
+input#slide2:checked ~ .slides .mem {
+    transform: translateX(-100%);
+}
+
+input#slide3:checked ~ .slides .mem {
+    transform: translateX(-200%);
+}
+
+input#slide4:checked ~ .slides .mem {
+    transform: translateX(-300%);
+}
+
+
 
 
 
