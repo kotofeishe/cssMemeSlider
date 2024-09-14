@@ -1,12 +1,15 @@
 body {
     margin: 0;
     background-color: #25282A;
+    box-sizing: border-box;
 }
 
 .slider {
-    background-color: #25282A;
-    width: 90%;
+    width: 90%;                     
     margin: auto;
+    display: flex;
+    flex-direction:column-reverse;
+    
     
 }
 
@@ -15,7 +18,7 @@ body {
     overflow: hidden;
     align-items: center;
     padding-top: 2%;
-    width: 100%;
+    justify-content: flex-start;
 }
 
 p {
@@ -39,6 +42,88 @@ img {
     display: flex;
     justify-content: flex-end;
     margin-top: auto;
+    transform: translateY(calc(-300%));
 }
+
+.mem {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    
+    
+}
+
+
+
+@media (min-width: 1300px)  {
+    .slider {
+        width: 55%; 
+}
+
+}
+
+@media (max-width: 768px)  {
+    
+    .bullets {
+        
+        justify-content: center;
+        margin-top: -4%;
+    }
+
+    p {
+        margin-top: 10%;
+        font-size: 1em;
+    }
+
+}
+
+@media (max-width: 475px)  {
+    .bullets {
+        
+        justify-content: center;
+        margin-top: -7%;
+    }
+
+    p {
+        margin-top: 12%;
+        font-size: 1em;
+    }
+
+
+    @media (max-width: 475px)  {
+    .bullets {
+        
+        justify-content: center;
+        margin-top: -7%;
+    }
+
+    p {
+        margin-top: 12%;
+        font-size: 1em;
+    }
+
+}
+}
+
+@media (max-width: 391px)  {
+    .bullets {
+        
+        justify-content: center;
+        margin-top: -14%;
+    }
+
+    p {
+        margin-top: 20%;
+        font-size: 1em;
+    }
+
+}
+
+#slide1:checked  ~ .slides {
+    transform: rotate(90deg)
+}
+
+
 
  
