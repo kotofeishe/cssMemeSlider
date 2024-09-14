@@ -68,6 +68,12 @@ input[type="radio"] {
     margin-left: 0.5em;
     cursor: pointer;
     border: #71ABFF solid 0.1em;
+
+}
+
+label:hover {
+    background-color: aliceblue;
+    border: aliceblue solid 0.1em;
 }
 
 input#slide1:checked ~ .bullets label[for="slide1"],
