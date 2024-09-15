@@ -24,7 +24,7 @@ body {
 p {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: aliceblue;
 }
 
@@ -35,7 +35,7 @@ img {
 .bullets {
     display: flex;
     justify-content: flex-end;
-    margin-top: 0.67em;
+    margin-top: 1.28em;
     transform: translateY(calc(-360%));
 }
 
@@ -83,9 +83,9 @@ input#slide4:checked ~ .bullets label[for="slide4"] {
     background-color: transparent;
 }
 
-@media (min-width: 1100px)  {
+@media (min-width: 1160px)  {
     .slider {
-        width: 50%; 
+        width: 55%; 
 }
 
 }
