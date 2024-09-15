@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    background-color: #25282A;
+    box-sizing: border-box;
+}
+
+.slider {
+    width: 90%;                     
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+       
+}
+
+.slides {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    padding-top: 2%;
+    justify-content: flex-start;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: aliceblue;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.bullets {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.28em;
+    transform: translateY(calc(-360%));
+}
+
+.mem {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;   
+}
+
+.one-mem, .two-mem, .three-mem, .four-mem {
+    transition: 0.3s ease;
+}
+
+.two-mem, .three-mem, .four-mem {
+    opacity: 0;
+}
+
+
+
+input[type="radio"] {
+    display: none;
+}
+
+.bullets label {
+    height: 0.8em;
+    width: 0.8em;
+    border-radius: 50px;
+    background-color: #71ABFF;
+    margin-left: 0.5em;
+    cursor: pointer;
+    border: #71ABFF solid 0.1em;
+
+}
+
+label:hover {
+    background-color: aliceblue;
+    border: aliceblue solid 0.1em;
+}
+
+input#slide1:checked ~ .bullets label[for="slide1"],
+input#slide2:checked ~ .bullets label[for="slide2"],
+input#slide3:checked ~ .bullets label[for="slide3"],
+input#slide4:checked ~ .bullets label[for="slide4"] {
+    background-color: transparent;
+}
+
+@media (min-width: 1160px)  {
+    .slider {
+        width: 55%; 
+}
+
+}
+
+@media (max-width: 768px)  {
+    
+    .bullets {
+        
+        justify-content: center;
+        margin-top: -1em;
+    }
+
+    p {
+        margin-top: 4em;
+        font-size: 1em;
+    }
+
+}
+
+    @media (max-width: 475px) and (min-width: 430px) {
+    .bullets {
+        
+        justify-content: center;
+        margin-top: -0.1em;
+    }
+
+    p {
+        margin-top: 3em;
+        font-size: 0.9em;
+    }
+
+}
+
+
+@media (max-width: 429px)  {
+    .bullets {
+        
+        justify-content: center;
+        margin-top: -0.1em;
+    }
+
+    p {
+        margin-top: 3.7em;
+        font-size: 0.8em;
+    }
+
+}
+
+@media (max-width: 380px)  {
+    .bullets {       
+        margin-top: -0.5em;
+    }
+
+}
+
+input#slide1:checked ~ .slides .mem {
+    transform: translateX(0);
+}
+
+input#slide2:checked ~ .slides .one-mem {
+    opacity: 0;
+}
+input#slide2:checked ~ .slides .two-mem {
+    opacity: 1;
+}
+input#slide2:checked ~ .slides .mem {
+    transform: translateX(-100%);
+}
+
+input#slide3:checked ~ .slides .mem {
+    transform: translateX(-200%);
+}
+input#slide3:checked ~ .slides .three-mem {
+    opacity: 1;
+}
+
+input#slide4:checked ~ .slides .mem {
+    transform: translateX(-300%);
+}
+input#slide4:checked ~ .slides .four-mem {
+    opacity: 1;
+}
+
+.back-label {
+    background-color: transparent;
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: 50px;
+    transform: translateX(-0.5em);
+}
+
+
+
+
+ 
