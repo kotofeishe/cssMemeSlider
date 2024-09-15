@@ -35,7 +35,7 @@ img {
 .bullets {
     display: flex;
     justify-content: flex-end;
-    margin-top: auto;
+    margin-top: 0.67em;
     transform: translateY(calc(-360%));
 }
 
@@ -95,11 +95,11 @@ input#slide4:checked ~ .bullets label[for="slide4"] {
     .bullets {
         
         justify-content: center;
-        margin-top: -4%;
+        margin-top: -1em;
     }
 
     p {
-        margin-top: 12%;
+        margin-top: 4em;
         font-size: 1em;
     }
 
@@ -109,11 +109,11 @@ input#slide4:checked ~ .bullets label[for="slide4"] {
     .bullets {
         
         justify-content: center;
-        margin-top: -2%;
+        margin-top: -0.1em;
     }
 
     p {
-        margin-top: 12%;
+        margin-top: 3em;
         font-size: 0.9em;
     }
 
@@ -124,12 +124,19 @@ input#slide4:checked ~ .bullets label[for="slide4"] {
     .bullets {
         
         justify-content: center;
-        margin-top: -2%;
+        margin-top: -0.1em;
     }
 
     p {
-        margin-top: 14%;
+        margin-top: 3.7em;
         font-size: 0.8em;
+    }
+
+}
+
+@media (max-width: 380px)  {
+    .bullets {       
+        margin-top: -0.5em;
     }
 
 }
@@ -162,6 +169,13 @@ input#slide4:checked ~ .slides .four-mem {
     opacity: 1;
 }
 
+.back-label {
+    background-color: transparent;
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: 50px;
+    transform: translateX(-0.5em);
+}
 
 
 
